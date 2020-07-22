@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ei9-WM-ZMv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="UsE-bg-bZf">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="ei9-WM-ZMv" customClass="ViewController" customModule="TestApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B3H-gT-NP8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Wu-is-iA7">
+                                <rect key="frame" x="25" y="314" width="364" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="c9n-jB-kud"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ei9-WM-ZMv" id="DdW-IZ-EBz"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Salary" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ml5-Mc-Akf">
+                                <rect key="frame" x="25" y="399" width="364" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="rYo-XJ-Zaz"/>
+                                    <constraint firstAttribute="height" constant="45" id="w8P-lw-odg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="name"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="rYo-XJ-Zaz"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="ei9-WM-ZMv" id="2LP-0d-F8J"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYg-VD-BEe">
+                                <rect key="frame" x="25" y="569" width="364" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="uae-EC-XkD"/>
+                                </constraints>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapRegister:" destination="ei9-WM-ZMv" eventType="touchUpInside" id="GRK-x7-Ed1"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ZC-X4-pzm">
+                                <rect key="frame" x="25" y="484" width="364" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="mt6-gT-1Nw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ei9-WM-ZMv" id="f8F-aw-RWh"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TYg-VD-BEe" firstAttribute="leading" secondItem="txX-gw-oAa" secondAttribute="leading" constant="25" id="C6X-kT-S1c">
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="txX-gw-oAa" firstAttribute="trailing" secondItem="Ml5-Mc-Akf" secondAttribute="trailing" constant="25" id="HYH-Pc-IFs">
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="txX-gw-oAa" firstAttribute="trailing" secondItem="TYg-VD-BEe" secondAttribute="trailing" constant="25" id="OdN-0L-fXV">
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="txX-gw-oAa" firstAttribute="trailing" secondItem="7ZC-X4-pzm" secondAttribute="trailing" constant="25" id="PId-S4-ud5"/>
+                            <constraint firstItem="Ml5-Mc-Akf" firstAttribute="leading" secondItem="txX-gw-oAa" secondAttribute="leading" constant="25" id="TFf-kw-HPO">
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="txX-gw-oAa" firstAttribute="trailing" secondItem="1Wu-is-iA7" secondAttribute="trailing" constant="25" id="Vcv-Pf-jEH">
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="1Wu-is-iA7" firstAttribute="leading" secondItem="B3H-gT-NP8" secondAttribute="leading" constant="25" id="XSO-1i-cvT">
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="TYg-VD-BEe" firstAttribute="top" secondItem="7ZC-X4-pzm" secondAttribute="bottom" constant="40" id="Ydf-07-T3j"/>
+                            <constraint firstItem="7ZC-X4-pzm" firstAttribute="leading" secondItem="txX-gw-oAa" secondAttribute="leading" constant="25" id="Zhj-dL-IHJ"/>
+                            <constraint firstItem="7ZC-X4-pzm" firstAttribute="top" secondItem="Ml5-Mc-Akf" secondAttribute="bottom" constant="40" id="kzt-Bl-BEq"/>
+                            <constraint firstItem="Ml5-Mc-Akf" firstAttribute="top" secondItem="1Wu-is-iA7" secondAttribute="bottom" constant="40" id="pca-jd-th7"/>
+                            <constraint firstItem="1Wu-is-iA7" firstAttribute="top" secondItem="txX-gw-oAa" secondAttribute="top" constant="270" id="zCg-8b-0L6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="txX-gw-oAa"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtAge" destination="7ZC-X4-pzm" id="meb-nO-S3m"/>
+                        <outlet property="txtName" destination="1Wu-is-iA7" id="WKW-es-c64"/>
+                        <outlet property="txtSalary" destination="Ml5-Mc-Akf" id="NQB-EN-qCs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfM-Fr-6UD" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122" y="-20"/>
+        </scene>
+    </scenes>
+</document>
